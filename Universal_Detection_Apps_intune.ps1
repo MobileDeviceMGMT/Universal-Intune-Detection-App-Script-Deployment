@@ -7,7 +7,7 @@ $Apps += Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Unins
 $display = $Apps | Where-Object {$PSItem.Displayname -like "YOUR APP NAME*"} | Select DisplayVersion 
 [version]$version = $display.DisplayVersion
 
-If($version -ge "YOUR APP VERSION)
+If($version -ge "YOUR APP VERSION")
 {
 Write-Host "Application $($version) is installed - checked in regedit"
 exit 0
